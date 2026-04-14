@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TaskMaster App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="login-container">
+
+<h1 class="app-title">TaskMaster To-Do App</h1>
+
+<h2>Login</h2>
+
+<input type="text" id="username" placeholder="Enter Username">
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="login()">Login</button>
+
+<p>Don't have an account?</p>
+
+<button onclick="signup()">Sign Up</button>
+
+</div>
+
+<script>
+function login(){
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
+
+if(user==="" || pass===""){
+alert("Please enter username and password");
+return;
+}
+
+localStorage.setItem("user",user);
+
+window.location.href="index.html";
+}
+
+function signup(){
+alert("Account created successfully!");
+}
+</script>
+
+</body>
+</html>
